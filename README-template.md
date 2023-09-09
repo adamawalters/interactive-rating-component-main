@@ -47,6 +47,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
+- Not sure why button.selected {} is not affecting the submit button, but this is acting as I desire
+- imported jquery and learned how to use it to add and remove classes
 
 ### Built with
 
@@ -76,9 +78,14 @@ To see how you can add code snippets, see below:
 }
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+$('button').on('click', function(){
+    if($(this).hasClass('selected')) {
+        $(this).removeClass('selected');
+    } else {
+        $('button').removeClass('selected');
+        $(this).addClass('selected')   
+    }
+});
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.

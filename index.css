@@ -17,15 +17,16 @@ html, body {
 
 
 #card {
-    font-size: 1rem;
-    width: 33%;
+    font-size: 1.2rem;
+    max-width: 30rem;
     background-color: hsl(213, 19%, 18%);
-    height: 42%;
+    height: 50%;
     text-align: left;
     padding: 1rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
+    
     
 }
 
@@ -78,19 +79,32 @@ button:hover {
 
 }
 
+button.selected{
+    background-color: hsl(217, 12%, 63%);
+    color: white;
+  }
+
 .text {
     margin-left: auto;
     margin-right: auto;
 }
 
-img {
-    border: none;
+#star-card {
     background-color: hsl(213, 19%, 23%);
-    padding: .5rem;
+    border: none;
     border-radius: 50%;
-    width: 1rem;
+    width: 3rem;
+    height: 3rem;
+    padding: .5rem;
+    text-align: center;
+    font-family: inherit;
+    color: hsl(217, 12%, 63%);
 }
 
 p {
     color: hsl(217, 12%, 63%);
+}
+
+#illustration-thank-you {
+    width: 10rem;
 }
