@@ -1,8 +1,7 @@
 
 
 let selectedValue = "";
-let thankURL = new URL("http://127.0.0.1:5500/thankyou.html")
-console.log(" thank URL is " + thankURL);
+let thankURL = new URL(window.location.origin + "/thankyou.html");
 
 
 $('.rbut').on('click', function(){
@@ -14,18 +13,13 @@ $('.rbut').on('click', function(){
         $(this).addClass('selected')  
         selectedValue = $(this).text();
         thankURL.searchParams.set("key1", selectedValue);
-        console.log("The url after adding adding the parameters is: " + thankURL);
     }
 });
 
-function getValueOfSelectedButton () {
-    return selectedValue;
-}
 
 $('#submit').on("click", function(){
-    //get the value of the selected button
-    console.log("value selected is " + getValueOfSelectedButton());
-    //put that value in a url of thank you and open that page on same tab
+    //get the value of the selected button = already present in selectedValue
+    //put that value in a url of thank you and open that page on same tab = URL already present in thankURL and updated on click
     window.location.href = thankURL;
 })
 

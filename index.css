@@ -22,11 +22,11 @@ html, body {
     background-color: hsl(213, 19%, 18%);
     height: 50%;
     text-align: left;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    
+    justify-content: center;    
     
 }
 
@@ -53,40 +53,44 @@ button:hover {
 }
 
 .btn-group {
+    margin: 0 40px 10px 10px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
 }
 
-.btn-group button {
+.rbut {
     background-color: hsl(213, 19%, 23%);
     border: none;
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
+    margin: 0 .3rem;
     text-align: center;
     font-family: inherit;
     color: hsl(217, 12%, 63%);
 }
 
-.btn-group button:hover {
+.rbut:hover {
     background-color: hsl(25, 97%, 53%);
     color: hsl(0, 0%, 100%);
 }
 
-.btn-group button:active {
+.rbut button:active {
     background-color: hsl(216, 12%, 54%);
 
 }
 
-button.selected{
+button.selected { /*applies to all buttons with the class 'selected' -  .selected button would apply to all chilld buttons within an element with a class "selected" */
     background-color: hsl(217, 12%, 63%);
     color: white;
   }
 
-.text {
-    margin-left: auto;
-    margin-right: auto;
+
+
+
+p {
+    color: hsl(217, 12%, 63%);
+    margin-top: 0;
 }
 
 #star-card {
@@ -96,15 +100,26 @@ button.selected{
     width: 3rem;
     height: 3rem;
     padding: .5rem;
-    text-align: center;
     font-family: inherit;
     color: hsl(217, 12%, 63%);
-}
-
-p {
-    color: hsl(217, 12%, 63%);
+    box-sizing: border-box;
 }
 
 #illustration-thank-you {
     width: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    
+}
+
+#selected-message {
+    padding: .5rem 1rem;
+    margin-top: 2rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    border-radius: 1rem;
+    color:  hsl(25, 97%, 53%);
+    background-color: hsl(213, 19%, 23%);
 }

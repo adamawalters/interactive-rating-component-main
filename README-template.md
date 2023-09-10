@@ -47,8 +47,12 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
-- Not sure why button.selected {} is not affecting the submit button, but this is acting as I desire
+- button.selected {} is not affecting the submit button as this is added on click, and I didn't add the event listener to the submit button
 - imported jquery and learned how to use it to add and remove classes
+- still unclear why the image on thank you page only centers with margin: auto and not text-align
+- set a variable with the selected value whenever a button was selected
+- passed the variable to a new html page via the url (url.searchParams.set(Key, Value))
+- gto the variable from the URL in the new page using window.location.search and urlSearchParams, .get("key")
 
 ### Built with
 
@@ -78,12 +82,15 @@ To see how you can add code snippets, see below:
 }
 ```
 ```js
-$('button').on('click', function(){
+$('.rbut').on('click', function(){
     if($(this).hasClass('selected')) {
         $(this).removeClass('selected');
+        selectedValue = "";
     } else {
         $('button').removeClass('selected');
-        $(this).addClass('selected')   
+        $(this).addClass('selected')  
+        selectedValue = $(this).text();
+        thankURL.searchParams.set("key1", selectedValue);
     }
 });
 ```
