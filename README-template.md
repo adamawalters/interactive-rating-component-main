@@ -53,6 +53,10 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - set a variable with the selected value whenever a button was selected
 - passed the variable to a new html page via the url (url.searchParams.set(Key, Value))
 - gto the variable from the URL in the new page using window.location.search and urlSearchParams, .get("key")
+- learned about:
+  - height: auto;
+  - how to run JS to update CSS values (element.setProperty("property", "value"))
+  
 
 ### Built with
 
