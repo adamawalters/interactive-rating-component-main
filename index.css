@@ -7,6 +7,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     font-family: 'Overpass', sans-serif;
 }
 
@@ -20,13 +21,12 @@ html, body {
     font-size: 1.2rem;
     max-width: 30rem;
     background-color: hsl(213, 19%, 18%);
-    height: 50%;
-    text-align: left;
+    /*height: 50%;*/
     padding: 2rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;    
+    justify-content: center; /*align-items: center centers the image but also affects the btn-group class*/    
     
 }
 
@@ -56,6 +56,7 @@ button:hover {
     margin: 0 40px 10px 10px;
     display: flex;
     justify-content: space-between;
+    align-items: space-between;
 }
 
 .rbut {
@@ -86,8 +87,6 @@ button.selected { /*applies to all buttons with the class 'selected' -  .selecte
   }
 
 
-
-
 p {
     color: hsl(217, 12%, 63%);
     margin-top: 0;
@@ -106,9 +105,11 @@ p {
 }
 
 #illustration-thank-you {
-    width: 10rem;
-    margin-top: 3rem;
+    width: 8rem;
+    /*margin-left: auto;
+    margin-right: auto;*/
     margin-bottom: 0;
+    display: block;
     
 }
 
@@ -120,4 +121,26 @@ p {
     border-radius: 1rem;
     color:  hsl(25, 97%, 53%);
     background-color: hsl(213, 19%, 23%);
+}
+
+.attribution {
+    font-size: 1.29rem;
+    max-width: 30rem;
+    background-color: hsl(213, 19%, 18%);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#div-in-att {
+    color: white;
+    max-width: 30rem;
+}
+
+.attribution a {
+    color: lightcyan;
 }
